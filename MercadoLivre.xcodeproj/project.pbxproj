@@ -3,18 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01754F2F935232998F72244C /* Pods_MercadoLivre_MercadoLivreUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC60B12E99A7F5A8CDFAC4A /* Pods_MercadoLivre_MercadoLivreUITests.framework */; };
+		7BF4E34852DE186D279F93B1 /* Pods_MercadoLivre.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD760C46FEACCEC35BE61BD /* Pods_MercadoLivre.framework */; };
+		BD72B78194558AE6C1ACBCA9 /* Pods_MercadoLivreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A596B3AA3549BF6E16DA6CB7 /* Pods_MercadoLivreTests.framework */; };
+		DBE0E6F62607BAA400FB670A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0E6F52607BAA400FB670A /* HomeViewModel.swift */; };
+		DBE0E7082607BB7F00FB670A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0E7072607BB7F00FB670A /* Endpoint.swift */; };
+		DBE0E7152607BE2900FB670A /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0E7142607BE2900FB670A /* RequestManager.swift */; };
+		DBE0E7212607C27B00FB670A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0E7202607C27B00FB670A /* Product.swift */; };
+		DBE0E7272607C50B00FB670A /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0E7262607C50B00FB670A /* HomeViewCell.swift */; };
+		DBE0E72F2607C87B00FB670A /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0E72E2607C87B00FB670A /* CustomTableView.swift */; };
+		DBE0E73F2607CF2100FB670A /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0E73E2607CF2100FB670A /* RequestError.swift */; };
+		DBE0E7902607D48800FB670A /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0E78F2607D48800FB670A /* APIService.swift */; };
+		DBE0E7A22607DE0B00FB670A /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0E7A12607DE0B00FB670A /* CustomImageView.swift */; };
 		DBFD3B0F26056889002CC1CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3B0E26056889002CC1CB /* AppDelegate.swift */; };
-		DBFD3B1126056889002CC1CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3B1026056889002CC1CB /* SceneDelegate.swift */; };
-		DBFD3B1326056889002CC1CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3B1226056889002CC1CB /* ViewController.swift */; };
-		DBFD3B1626056889002CC1CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBFD3B1426056889002CC1CB /* Main.storyboard */; };
 		DBFD3B182605688A002CC1CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFD3B172605688A002CC1CB /* Assets.xcassets */; };
 		DBFD3B1B2605688A002CC1CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBFD3B192605688A002CC1CB /* LaunchScreen.storyboard */; };
 		DBFD3B262605688A002CC1CB /* MercadoLivreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3B252605688A002CC1CB /* MercadoLivreTests.swift */; };
 		DBFD3B312605688A002CC1CB /* MercadoLivreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3B302605688A002CC1CB /* MercadoLivreUITests.swift */; };
+		DBFD3B4726056D04002CC1CB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3B4626056D04002CC1CB /* Coordinator.swift */; };
+		DBFD3B4C26056D6D002CC1CB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3B4B26056D6D002CC1CB /* AppCoordinator.swift */; };
+		DBFD3B5126056E8F002CC1CB /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3B5026056E8F002CC1CB /* HomeCoordinator.swift */; };
+		DBFD3B5D26056FAD002CC1CB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3B5C26056FAD002CC1CB /* HomeViewController.swift */; };
+		DBFD3B6526057043002CC1CB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3B6426057043002CC1CB /* HomeView.swift */; };
+		DBFD3B7D2605754D002CC1CB /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3B7C2605754D002CC1CB /* CustomView.swift */; };
+		DBFD3B97260577C8002CC1CB /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3B96260577C8002CC1CB /* CustomViewController.swift */; };
+		DBFD3B9C2605787E002CC1CB /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD3B9B2605787E002CC1CB /* CustomColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +52,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0322EFCAFDD3EACB9466880A /* Pods-MercadoLivre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoLivre.release.xcconfig"; path = "Target Support Files/Pods-MercadoLivre/Pods-MercadoLivre.release.xcconfig"; sourceTree = "<group>"; };
+		2028812ABA1E65DC1C1A9006 /* Pods-MercadoLivre-MercadoLivreUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoLivre-MercadoLivreUITests.release.xcconfig"; path = "Target Support Files/Pods-MercadoLivre-MercadoLivreUITests/Pods-MercadoLivre-MercadoLivreUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3AC60B12E99A7F5A8CDFAC4A /* Pods_MercadoLivre_MercadoLivreUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadoLivre_MercadoLivreUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AD760C46FEACCEC35BE61BD /* Pods_MercadoLivre.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadoLivre.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44D6B59BAEECA81BF0E68B8B /* Pods-MercadoLivreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoLivreTests.release.xcconfig"; path = "Target Support Files/Pods-MercadoLivreTests/Pods-MercadoLivreTests.release.xcconfig"; sourceTree = "<group>"; };
+		6879D51FF2E236BE68889340 /* Pods-MercadoLivreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoLivreTests.debug.xcconfig"; path = "Target Support Files/Pods-MercadoLivreTests/Pods-MercadoLivreTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A596B3AA3549BF6E16DA6CB7 /* Pods_MercadoLivreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadoLivreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8F40666CDE7D27C0AC762F6 /* Pods-MercadoLivre-MercadoLivreUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoLivre-MercadoLivreUITests.debug.xcconfig"; path = "Target Support Files/Pods-MercadoLivre-MercadoLivreUITests/Pods-MercadoLivre-MercadoLivreUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DBE0E6F52607BAA400FB670A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		DBE0E7072607BB7F00FB670A /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		DBE0E7142607BE2900FB670A /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		DBE0E7202607C27B00FB670A /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		DBE0E7262607C50B00FB670A /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		DBE0E72E2607C87B00FB670A /* CustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
+		DBE0E73E2607CF2100FB670A /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		DBE0E78F2607D48800FB670A /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		DBE0E7A12607DE0B00FB670A /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		DBFD3B0B26056889002CC1CB /* MercadoLivre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoLivre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFD3B0E26056889002CC1CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DBFD3B1026056889002CC1CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DBFD3B1226056889002CC1CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DBFD3B1526056889002CC1CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBFD3B172605688A002CC1CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBFD3B1A2605688A002CC1CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBFD3B1C2605688A002CC1CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +80,15 @@
 		DBFD3B2C2605688A002CC1CB /* MercadoLivreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercadoLivreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFD3B302605688A002CC1CB /* MercadoLivreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercadoLivreUITests.swift; sourceTree = "<group>"; };
 		DBFD3B322605688A002CC1CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBFD3B4626056D04002CC1CB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DBFD3B4B26056D6D002CC1CB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		DBFD3B5026056E8F002CC1CB /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		DBFD3B5C26056FAD002CC1CB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DBFD3B6426057043002CC1CB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DBFD3B7C2605754D002CC1CB /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		DBFD3B96260577C8002CC1CB /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		DBFD3B9B2605787E002CC1CB /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		E20EC28F90E6D50C3CCF1417 /* Pods-MercadoLivre.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoLivre.debug.xcconfig"; path = "Target Support Files/Pods-MercadoLivre/Pods-MercadoLivre.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BF4E34852DE186D279F93B1 /* Pods_MercadoLivre.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD72B78194558AE6C1ACBCA9 /* Pods_MercadoLivreTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +112,63 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01754F2F935232998F72244C /* Pods_MercadoLivre_MercadoLivreUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C6AA5465D34F67A5559A748A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AD760C46FEACCEC35BE61BD /* Pods_MercadoLivre.framework */,
+				3AC60B12E99A7F5A8CDFAC4A /* Pods_MercadoLivre_MercadoLivreUITests.framework */,
+				A596B3AA3549BF6E16DA6CB7 /* Pods_MercadoLivreTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC108863CF168BE98D1890C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E20EC28F90E6D50C3CCF1417 /* Pods-MercadoLivre.debug.xcconfig */,
+				0322EFCAFDD3EACB9466880A /* Pods-MercadoLivre.release.xcconfig */,
+				C8F40666CDE7D27C0AC762F6 /* Pods-MercadoLivre-MercadoLivreUITests.debug.xcconfig */,
+				2028812ABA1E65DC1C1A9006 /* Pods-MercadoLivre-MercadoLivreUITests.release.xcconfig */,
+				6879D51FF2E236BE68889340 /* Pods-MercadoLivreTests.debug.xcconfig */,
+				44D6B59BAEECA81BF0E68B8B /* Pods-MercadoLivreTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DBE0E7062607BB5100FB670A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DBE0E7072607BB7F00FB670A /* Endpoint.swift */,
+				DBE0E7142607BE2900FB670A /* RequestManager.swift */,
+				DBE0E73E2607CF2100FB670A /* RequestError.swift */,
+				DBE0E78F2607D48800FB670A /* APIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DBE0E71F2607C26F00FB670A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DBE0E7202607C27B00FB670A /* Product.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DBE0E7252607C4FB00FB670A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DBE0E7262607C50B00FB670A /* HomeViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		DBFD3B0226056889002CC1CB = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +176,8 @@
 				DBFD3B242605688A002CC1CB /* MercadoLivreTests */,
 				DBFD3B2F2605688A002CC1CB /* MercadoLivreUITests */,
 				DBFD3B0C26056889002CC1CB /* Products */,
+				CC108863CF168BE98D1890C4 /* Pods */,
+				C6AA5465D34F67A5559A748A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,12 +195,14 @@
 			isa = PBXGroup;
 			children = (
 				DBFD3B0E26056889002CC1CB /* AppDelegate.swift */,
-				DBFD3B1026056889002CC1CB /* SceneDelegate.swift */,
-				DBFD3B1226056889002CC1CB /* ViewController.swift */,
-				DBFD3B1426056889002CC1CB /* Main.storyboard */,
 				DBFD3B172605688A002CC1CB /* Assets.xcassets */,
 				DBFD3B192605688A002CC1CB /* LaunchScreen.storyboard */,
 				DBFD3B1C2605688A002CC1CB /* Info.plist */,
+				DBFD3B7B2605753E002CC1CB /* Utility */,
+				DBE0E71F2607C26F00FB670A /* Models */,
+				DBE0E7062607BB5100FB670A /* Services */,
+				DBFD3B5B26056F8A002CC1CB /* Views */,
+				DBFD3B4526056CFA002CC1CB /* Coordinator */,
 			);
 			path = MercadoLivre;
 			sourceTree = "<group>";
@@ -128,6 +225,47 @@
 			path = MercadoLivreUITests;
 			sourceTree = "<group>";
 		};
+		DBFD3B4526056CFA002CC1CB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DBFD3B4626056D04002CC1CB /* Coordinator.swift */,
+				DBFD3B4B26056D6D002CC1CB /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DBFD3B5B26056F8A002CC1CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DBFD3B8B26057610002CC1CB /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DBFD3B7B2605753E002CC1CB /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				DBFD3B7C2605754D002CC1CB /* CustomView.swift */,
+				DBE0E7A12607DE0B00FB670A /* CustomImageView.swift */,
+				DBFD3B96260577C8002CC1CB /* CustomViewController.swift */,
+				DBFD3B9B2605787E002CC1CB /* CustomColor.swift */,
+				DBE0E72E2607C87B00FB670A /* CustomTableView.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		DBFD3B8B26057610002CC1CB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DBE0E7252607C4FB00FB670A /* Cell */,
+				DBFD3B5C26056FAD002CC1CB /* HomeViewController.swift */,
+				DBFD3B5026056E8F002CC1CB /* HomeCoordinator.swift */,
+				DBFD3B6426057043002CC1CB /* HomeView.swift */,
+				DBE0E6F52607BAA400FB670A /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +273,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBFD3B352605688A002CC1CB /* Build configuration list for PBXNativeTarget "MercadoLivre" */;
 			buildPhases = (
+				0B064E4021931C8DDE55C6F4 /* [CP] Check Pods Manifest.lock */,
 				DBFD3B0726056889002CC1CB /* Sources */,
 				DBFD3B0826056889002CC1CB /* Frameworks */,
 				DBFD3B0926056889002CC1CB /* Resources */,
+				EB501696FE1B337D0EF5AF3E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +292,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBFD3B382605688A002CC1CB /* Build configuration list for PBXNativeTarget "MercadoLivreTests" */;
 			buildPhases = (
+				9EC9C91091E27A31AB8972DA /* [CP] Check Pods Manifest.lock */,
 				DBFD3B1D2605688A002CC1CB /* Sources */,
 				DBFD3B1E2605688A002CC1CB /* Frameworks */,
 				DBFD3B1F2605688A002CC1CB /* Resources */,
@@ -170,9 +311,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBFD3B3B2605688A002CC1CB /* Build configuration list for PBXNativeTarget "MercadoLivreUITests" */;
 			buildPhases = (
+				601B2A3283F73F4FF938C9BE /* [CP] Check Pods Manifest.lock */,
 				DBFD3B282605688A002CC1CB /* Sources */,
 				DBFD3B292605688A002CC1CB /* Frameworks */,
 				DBFD3B2A2605688A002CC1CB /* Resources */,
+				913D8D1D2C2EFAF5DF89DD4A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,7 +376,6 @@
 			files = (
 				DBFD3B1B2605688A002CC1CB /* LaunchScreen.storyboard in Resources */,
 				DBFD3B182605688A002CC1CB /* Assets.xcassets in Resources */,
-				DBFD3B1626056889002CC1CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +395,132 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B064E4021931C8DDE55C6F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MercadoLivre-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		601B2A3283F73F4FF938C9BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MercadoLivre-MercadoLivreUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		913D8D1D2C2EFAF5DF89DD4A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MercadoLivre-MercadoLivreUITests/Pods-MercadoLivre-MercadoLivreUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MercadoLivre-MercadoLivreUITests/Pods-MercadoLivre-MercadoLivreUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MercadoLivre-MercadoLivreUITests/Pods-MercadoLivre-MercadoLivreUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EC9C91091E27A31AB8972DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MercadoLivreTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB501696FE1B337D0EF5AF3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MercadoLivre/Pods-MercadoLivre-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MercadoLivre/Pods-MercadoLivre-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MercadoLivre/Pods-MercadoLivre-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DBFD3B0726056889002CC1CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBFD3B1326056889002CC1CB /* ViewController.swift in Sources */,
+				DBE0E7902607D48800FB670A /* APIService.swift in Sources */,
+				DBE0E7A22607DE0B00FB670A /* CustomImageView.swift in Sources */,
+				DBE0E73F2607CF2100FB670A /* RequestError.swift in Sources */,
+				DBFD3B5D26056FAD002CC1CB /* HomeViewController.swift in Sources */,
+				DBE0E7082607BB7F00FB670A /* Endpoint.swift in Sources */,
+				DBE0E7152607BE2900FB670A /* RequestManager.swift in Sources */,
+				DBFD3B4C26056D6D002CC1CB /* AppCoordinator.swift in Sources */,
+				DBFD3B9C2605787E002CC1CB /* CustomColor.swift in Sources */,
+				DBE0E72F2607C87B00FB670A /* CustomTableView.swift in Sources */,
+				DBE0E6F62607BAA400FB670A /* HomeViewModel.swift in Sources */,
+				DBFD3B5126056E8F002CC1CB /* HomeCoordinator.swift in Sources */,
+				DBFD3B7D2605754D002CC1CB /* CustomView.swift in Sources */,
+				DBFD3B6526057043002CC1CB /* HomeView.swift in Sources */,
+				DBE0E7272607C50B00FB670A /* HomeViewCell.swift in Sources */,
 				DBFD3B0F26056889002CC1CB /* AppDelegate.swift in Sources */,
-				DBFD3B1126056889002CC1CB /* SceneDelegate.swift in Sources */,
+				DBFD3B4726056D04002CC1CB /* Coordinator.swift in Sources */,
+				DBFD3B97260577C8002CC1CB /* CustomViewController.swift in Sources */,
+				DBE0E7212607C27B00FB670A /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +556,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DBFD3B1426056889002CC1CB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DBFD3B1526056889002CC1CB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DBFD3B192605688A002CC1CB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -433,12 +685,14 @@
 		};
 		DBFD3B362605688A002CC1CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E20EC28F90E6D50C3CCF1417 /* Pods-MercadoLivre.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9LN3US6U5F;
 				INFOPLIST_FILE = MercadoLivre/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,18 +700,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.testemercadolivre.MercadoLivre;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		DBFD3B372605688A002CC1CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0322EFCAFDD3EACB9466880A /* Pods-MercadoLivre.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9LN3US6U5F;
 				INFOPLIST_FILE = MercadoLivre/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,12 +721,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.testemercadolivre.MercadoLivre;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		DBFD3B392605688A002CC1CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6879D51FF2E236BE68889340 /* Pods-MercadoLivreTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +750,7 @@
 		};
 		DBFD3B3A2605688A002CC1CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44D6B59BAEECA81BF0E68B8B /* Pods-MercadoLivreTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +773,7 @@
 		};
 		DBFD3B3C2605688A002CC1CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8F40666CDE7D27C0AC762F6 /* Pods-MercadoLivre-MercadoLivreUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +794,7 @@
 		};
 		DBFD3B3D2605688A002CC1CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2028812ABA1E65DC1C1A9006 /* Pods-MercadoLivre-MercadoLivreUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -9,15 +9,14 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     
     // MARK: - View
     private unowned var screenView: HomeView { return self.view as! HomeView }
+    private var viewModel: HomeViewModel!
+    private var refreshControl = UIRefreshControl()
     
-    // MARK: - Variables
-    private let viewModel = HomeViewModel()
-    private let disposeBag = DisposeBag()
-
+    
     // MARK: - LifeCycle
     override func loadView() {
         view = HomeView()
@@ -29,9 +28,15 @@ class HomeViewController: UIViewController {
         fetchData()
     }
     
+    // MARK: - Init
+    convenience init(viewModel: HomeViewModel) {
+        self.init()
+        self.viewModel = viewModel
+    }
+    
     // MARK: - Setup
     private func setup() {
-        setupNavbar()
+        setupNavbarLogo()
         setupTableView()
         setupObservables()
     }
@@ -39,6 +44,10 @@ class HomeViewController: UIViewController {
     private func setupTableView() {
         screenView.tableView.delegate = self
         screenView.tableView.dataSource = self
+        
+        refreshControl.addTarget(self, action: #selector(fetchData), for: .valueChanged)
+        screenView.tableView.refreshControl  = refreshControl
+        
     }
     
     private func setupObservables() {
@@ -46,7 +55,7 @@ class HomeViewController: UIViewController {
         viewModel.loading
             .asDriver(onErrorJustReturn: false)
             .drive { [weak self] (loading) in
-                self?.setLoader(show: loading)
+                loading ? self?.refreshControl.beginRefreshing() : self?.refreshControl.endRefreshing()
             }
             .disposed(by: disposeBag)
         
@@ -60,8 +69,8 @@ class HomeViewController: UIViewController {
     }
     
     // MARK: - Data
-    private func fetchData() {
-        viewModel.fetchData(searchText: "TV 40 polegadas")
+    @objc private func fetchData() {
+        viewModel.fetchData()
     }
 
 }

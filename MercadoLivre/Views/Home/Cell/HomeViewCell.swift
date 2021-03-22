@@ -27,17 +27,16 @@ final class HomeViewCell: UITableViewCell {
     // MARK: - Setup
     func setup(product: Product) {
         productNameLabel.text = product.title
-        productPriceLabel.text = "R$ 100,00"
+        productPriceLabel.text = product.price?.toBRLFormat()
         thumbImageView.load(url: product.thumbnail)
     }
     
     //MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        addSetup()
         addViews()
         addConstraints()
-        accessoryType  = .none
-        backgroundColor = .white
     }
     
     required init?(coder: NSCoder) {
@@ -47,20 +46,20 @@ final class HomeViewCell: UITableViewCell {
     // MARK: - Function Views
     private func makeThumbImageView() -> UIImageView {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }
     
     private func makeNameLabel() -> UILabel {
         let label = UILabel()
         label.numberOfLines = 0
-        label.font = .systemFont(ofSize: 15, weight: .bold)
         return label
     }
     
     private func makePriceLabel() -> UILabel {
         let label = UILabel()
         label.numberOfLines = 0
+        label.font = .systemFont(ofSize: 18, weight: .bold)
         return label
     }
     
@@ -72,6 +71,12 @@ final class HomeViewCell: UITableViewCell {
     }
     
     // MARK: - Functions
+    func addSetup() {
+        accessoryType  = .none
+        backgroundColor = .white
+        selectionStyle = .none
+    }
+    
     func addViews() {
         addSubview(thumbImageView)
         addSubview(stackView)
@@ -91,8 +96,6 @@ final class HomeViewCell: UITableViewCell {
             make.leading.equalTo(thumbImageView.snp.trailing).offset(16)
             make.trailing.equalToSuperview().inset(16)
         }
-
-        
         
     }
     

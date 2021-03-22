@@ -16,7 +16,7 @@ class Product: Codable {
     var id: String?
     var site_id: String?
     var title: String?
-    var price: Double?
+    var price: Int?
     var condition: String?
     var thumbnail: String?
     var permalink: String?

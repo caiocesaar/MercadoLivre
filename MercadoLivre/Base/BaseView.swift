@@ -1,5 +1,5 @@
 //
-//  CustomView.swift
+//  BaseView.swift
 //  MercadoLivre
 //
 //  Created by Cesar on 19/03/21.
@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class CustomView: UIView {
+class BaseView: UIView {
     
     //MARK: - Init
     override init(frame: CGRect) {

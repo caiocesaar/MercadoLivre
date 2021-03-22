@@ -11,7 +11,7 @@ private var loaderView: UIView?
 
 extension UIViewController {
     
-    func setupNavbar() {
+    func setupNavbarLogo() {
         let logo = UIImage(named: "logo-h")
         let imageView = UIImageView(image: logo)
         imageView.contentMode = .scaleAspectFit

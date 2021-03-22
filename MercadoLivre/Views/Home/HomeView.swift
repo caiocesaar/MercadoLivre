@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class HomeView: CustomView {
+final class HomeView: BaseView {
     
     // MARK: - Views
     lazy var tableView = makeTableView()

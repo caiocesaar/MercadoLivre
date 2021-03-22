@@ -11,6 +11,7 @@ target 'MercadoLivre' do
   pod 'RxSwift', '~> 4.0'
   pod 'RxCocoa', '~> 4.0'
   pod 'Alamofire', '~> 4.9'
+  pod 'IQKeyboardManagerSwift', '6.3.0'
   # Pods for MercadoLivre
 
   target 'MercadoLivreTests' do

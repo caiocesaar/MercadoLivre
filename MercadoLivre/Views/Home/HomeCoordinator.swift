@@ -13,15 +13,17 @@ class HomeCoordinator: Coordinator {
     private let presenter: UINavigationController
     private var viewController: HomeViewController?
     private var coordinator: Coordinator?
+    private var viewModel: HomeViewModel
     
     //MARK: - Init
-    init(presenter: UINavigationController) {
+    init(presenter: UINavigationController, viewModel: HomeViewModel) {
         self.presenter = presenter
+        self.viewModel = viewModel
     }
     
     // MARK: - Functions
     func start() {
-        let viewController = HomeViewController()
+        let viewController = HomeViewController(viewModel: viewModel)
         presenter.pushViewController(viewController, animated: true)
         self.viewController = viewController
     }

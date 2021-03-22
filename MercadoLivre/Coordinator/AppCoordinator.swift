@@ -12,21 +12,19 @@ final class AppCoordinator: Coordinator {
     // MARK: - Variables
     let window: UIWindow
     let rootViewController: UINavigationController
-    let homeCoordinator: HomeCoordinator?
+    let searchCoordinator: SearchCoordinator?
     
     // MARK: - Init
     init(window: UIWindow) {
         self.window = window
         rootViewController = UINavigationController()
-        
-        homeCoordinator = HomeCoordinator(presenter: rootViewController)
-        
+        searchCoordinator = SearchCoordinator(presenter: rootViewController)
     }
     
     // MARK: - Functions
     func start() {
         window.rootViewController = rootViewController
-        homeCoordinator?.start()
+        searchCoordinator?.start()
         window.makeKeyAndVisible()
     }
     

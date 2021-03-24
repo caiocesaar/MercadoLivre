@@ -10,7 +10,6 @@
 		01754F2F935232998F72244C /* Pods_MercadoLivre_MercadoLivreUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC60B12E99A7F5A8CDFAC4A /* Pods_MercadoLivre_MercadoLivreUITests.framework */; };
 		7BF4E34852DE186D279F93B1 /* Pods_MercadoLivre.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD760C46FEACCEC35BE61BD /* Pods_MercadoLivre.framework */; };
 		BD72B78194558AE6C1ACBCA9 /* Pods_MercadoLivreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A596B3AA3549BF6E16DA6CB7 /* Pods_MercadoLivreTests.framework */; };
-		DBCC0623260AC9FB00F6F69A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCC0622260AC9FB00F6F69A /* String.swift */; };
 		DBCC0628260AD02800F6F69A /* ValueAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCC0627260AD02800F6F69A /* ValueAttribute.swift */; };
 		DBCC062D260AD03800F6F69A /* AttributeProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCC062C260AD03800F6F69A /* AttributeProduct.swift */; };
 		DBCC0632260AD06500F6F69A /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCC0631260AD06500F6F69A /* ProductResponse.swift */; };
@@ -76,7 +75,6 @@
 		6879D51FF2E236BE68889340 /* Pods-MercadoLivreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoLivreTests.debug.xcconfig"; path = "Target Support Files/Pods-MercadoLivreTests/Pods-MercadoLivreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A596B3AA3549BF6E16DA6CB7 /* Pods_MercadoLivreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadoLivreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8F40666CDE7D27C0AC762F6 /* Pods-MercadoLivre-MercadoLivreUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoLivre-MercadoLivreUITests.debug.xcconfig"; path = "Target Support Files/Pods-MercadoLivre-MercadoLivreUITests/Pods-MercadoLivre-MercadoLivreUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		DBCC0622260AC9FB00F6F69A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		DBCC0627260AD02800F6F69A /* ValueAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueAttribute.swift; sourceTree = "<group>"; };
 		DBCC062C260AD03800F6F69A /* AttributeProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeProduct.swift; sourceTree = "<group>"; };
 		DBCC0631260AD06500F6F69A /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
@@ -321,7 +319,6 @@
 				DBFD3B9B2605787E002CC1CB /* UIColor.swift */,
 				DBE0E72E2607C87B00FB670A /* UITableView.swift */,
 				DBE0E82126094A5400FB670A /* Float.swift */,
-				DBCC0622260AC9FB00F6F69A /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -590,7 +587,6 @@
 				DBE0E7F426092C1C00FB670A /* BaseViewModel.swift in Sources */,
 				DBCC0632260AD06500F6F69A /* ProductResponse.swift in Sources */,
 				DBFD3B9C2605787E002CC1CB /* UIColor.swift in Sources */,
-				DBCC0623260AC9FB00F6F69A /* String.swift in Sources */,
 				DBE0E72F2607C87B00FB670A /* UITableView.swift in Sources */,
 				DBE0E82E2609531500FB670A /* DetailViewController.swift in Sources */,
 				DBE0E7D1260927A800FB670A /* SearchView.swift in Sources */,

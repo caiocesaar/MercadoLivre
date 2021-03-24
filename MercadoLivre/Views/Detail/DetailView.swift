@@ -158,7 +158,7 @@ extension DetailView {
         thumbImageView.load(url: product.thumbnail)
         titleLabel.text = product.title
         priceLabel.text = product.price?.toCurrencyFormat()
-        conditionLabel.text = product.condition?.getCondition()
+        conditionLabel.text = getCondition(condition: product.condition)
         soldQuantityLabel.text = getSoldQuantity(quantity: product.sold_quantity)
         installmentsLabel.text = getInstallments(
             quantity: product.installments?.quantity,
@@ -169,7 +169,7 @@ extension DetailView {
     
     // MARK: - Getters
     func getSoldQuantity(quantity: Int?) -> String {
-        guard let quantity = quantity, quantity < 1 else {
+        guard let quantity = quantity, quantity > 0 else {
             return ""
         }
         return quantity > 1 ? "\(quantity) vendidos" : "\(quantity) vendido"
@@ -194,6 +194,22 @@ extension DetailView {
             return "1 disponível"
         default:
             return "\(quantity) disponíveis"
+        }
+    }
+    
+    func getCondition(condition: String?) -> String {
+        
+        guard let condition = condition else {
+            return ""
+        }
+        
+        switch condition {
+        case "new":
+            return "Novo"
+        case "used":
+            return "Usado"
+        default:
+            return condition
         }
     }
     

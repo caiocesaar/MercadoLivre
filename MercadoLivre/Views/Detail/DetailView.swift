@@ -106,6 +106,7 @@ final class DetailView: BaseView {
         inventoryQuantityLabel.snp.makeConstraints { (make) in
             make.top.equalTo(inventoryLabel.snp.bottom).offset(8)
             make.leading.trailing.equalTo(titleLabel)
+            make.bottom.greaterThanOrEqualTo(contentView).inset(16)
         }
         
     }

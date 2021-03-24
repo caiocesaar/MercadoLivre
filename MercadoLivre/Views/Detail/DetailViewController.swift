@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailViewController: BaseViewController {
+final class DetailViewController: BaseViewController {
     
     // MARK: - View
     private unowned var screenView: DetailView { return self.view as! DetailView }

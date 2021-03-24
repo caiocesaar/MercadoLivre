@@ -7,7 +7,7 @@
 
 import RxCocoa
 
-class DetailViewModel: BaseViewModel {
+final class DetailViewModel: BaseViewModel {
     
     let product = BehaviorRelay<Product?>(value: nil)
     

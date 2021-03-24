@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 import RxSwift
 
-class RequestManager<T:Codable> {
+final class RequestManager<T:Codable> {
     
     /// Checks if there active internet connection
     private class var isConnectedToInternet: Bool {

@@ -13,7 +13,7 @@ protocol HomeViewControllerDelegate: class {
     func openDetail(product: Product)
 }
 
-class HomeViewController: BaseViewController {
+final class HomeViewController: BaseViewController {
     
     // MARK: - View
     private unowned var screenView: HomeView { return self.view as! HomeView }

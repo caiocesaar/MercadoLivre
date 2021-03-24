@@ -8,7 +8,7 @@
 import RxSwift
 import Alamofire
 
-class APIService {
+final class APIService {
     
     static func getProducts(searchText: String) -> Observable<ProductResponse> {
         var parameters = Parameters()

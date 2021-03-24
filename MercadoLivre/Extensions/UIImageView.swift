@@ -8,6 +8,11 @@
 import UIKit
 
 extension UIImageView {
+    
+    /// Set image from a remote url
+    ///
+    /// - Parameters:
+    ///     - url: The url of the image.
     func load(url: String?) {
         
         guard let url = url else {

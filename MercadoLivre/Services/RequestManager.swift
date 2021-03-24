@@ -51,7 +51,7 @@ final class RequestManager<T:Codable> {
                 Alamofire.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers).responseJSON(completionHandler: { (response) in
                     self.printResult(result: response.value)
                     if let status = response.response?.statusCode {
-                        print("STATUS: \(status)")
+                        print("Status Code: \(status)")
                     }
                     if let result = resultBlock(response: response, error: { (error) in
                         observer.onError(error) }){
@@ -138,15 +138,15 @@ final class RequestManager<T:Codable> {
         return .unknownReason
     }
     
-    // Prints the request
+    /// Prints the request
     private static func printAccess(url: String, parameters: Parameters?) {
         let param: Any = parameters ?? ""
-        print("\n ======== URL SENDO ACESSADA ======== \n\n - URL:\n \(url) \n\n - PARAMETROS:\n \(param)\n\n ==================================== \n")
+        print("URL: \(url) \n\n PARAMETROS:\n \(param)\n\n")
     }
     
     /// Prints the result
     private static func printResult(result: Any?){
-        print("\n ======== RESPOSTA DO REQUEST ======== \n\n \(result ?? "") \n\n ==================================== \n")
+        print(result)
     }
 }
 

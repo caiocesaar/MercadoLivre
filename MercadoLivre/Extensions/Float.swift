@@ -9,6 +9,7 @@ import Foundation
 
 extension Float {
     
+    /// Return for the brazilian currency format
     func toCurrencyFormat() -> String {
         let floatNumber = self/100
         let formatter = NumberFormatter()

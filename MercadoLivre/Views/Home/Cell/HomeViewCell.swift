@@ -27,7 +27,7 @@ final class HomeViewCell: UITableViewCell {
     // MARK: - Setup
     func setup(product: Product) {
         productNameLabel.text = product.title
-        productPriceLabel.text = product.price?.toBRLFormat()
+        productPriceLabel.text = product.price?.toCurrencyFormat()
         thumbImageView.load(url: product.thumbnail)
     }
     

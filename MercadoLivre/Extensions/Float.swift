@@ -1,5 +1,5 @@
 //
-//  Int.swift
+//  Float.swift
 //  MercadoLivre
 //
 //  Created by Cesar on 22/03/21.
@@ -7,13 +7,9 @@
 
 import Foundation
 
-extension Int {
+extension Float {
     
-    var digits: [Int] {
-        return String(describing: self).compactMap { Int(String($0)) }
-    }
-    
-    func toBRLFormat() -> String {
+    func toCurrencyFormat() -> String {
         let floatNumber = self/100
         let formatter = NumberFormatter()
         formatter.locale = Locale(identifier: "pt-BR")

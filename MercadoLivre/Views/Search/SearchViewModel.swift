@@ -8,7 +8,7 @@
 import Foundation
 import RxCocoa
 
-class SearchViewModel: BaseViewModel {
+final class SearchViewModel: BaseViewModel {
     
     // MARK: - Variables
     let searchText = BehaviorRelay<String>(value: "")

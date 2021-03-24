@@ -9,13 +9,19 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+protocol HomeViewControllerDelegate: class {
+    func openDetail(product: Product)
+}
+
 class HomeViewController: BaseViewController {
     
     // MARK: - View
     private unowned var screenView: HomeView { return self.view as! HomeView }
+    
+    // MARK: - Variables
     private var viewModel: HomeViewModel!
     private var refreshControl = UIRefreshControl()
-    
+    private weak var delegate: HomeViewControllerDelegate?
     
     // MARK: - LifeCycle
     override func loadView() {
@@ -29,9 +35,10 @@ class HomeViewController: BaseViewController {
     }
     
     // MARK: - Init
-    convenience init(viewModel: HomeViewModel) {
+    convenience init(viewModel: HomeViewModel, delegate: HomeViewControllerDelegate) {
         self.init()
         self.viewModel = viewModel
+        self.delegate = delegate
     }
     
     // MARK: - Setup
@@ -87,5 +94,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setup(product: viewModel.products.value[indexPath.row])
         return cell
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let product = viewModel.products.value[indexPath.row]
+        delegate?.openDetail(product: product)
+    }
+    
 }

@@ -15,7 +15,7 @@ class BaseView: UIView {
         super.init(frame: frame)
         addViews()
         addConstraints()
-        backgroundColor = .white
+        addConfiguration()
     }
     
     required init?(coder: NSCoder) {
@@ -37,11 +37,13 @@ class BaseView: UIView {
     }
     
     func addConstraints() {
-        
         wrapperView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        
+    }
+    
+    func addConfiguration() {
+        backgroundColor = .white
     }
     
 }

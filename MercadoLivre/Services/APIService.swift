@@ -10,7 +10,7 @@ import Alamofire
 
 class APIService {
     
-    static func getProducts(searchText: String) -> Observable<MainProductResponse> {
+    static func getProducts(searchText: String) -> Observable<ProductResponse> {
         var parameters = Parameters()
         parameters["q"] = searchText
         return RequestManager.getToAPIService(endpoint: .search, parameters: parameters)

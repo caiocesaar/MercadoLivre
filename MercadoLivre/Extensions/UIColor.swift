@@ -10,6 +10,7 @@ import UIKit
 enum AssetsColor: String {
     case colorAccent
     case colorSecondary
+    case colorSeparator
 }
 
 extension UIColor {

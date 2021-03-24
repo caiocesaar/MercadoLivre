@@ -46,6 +46,7 @@ final class SearchViewController: BaseViewController {
         setupNavbarLogo()
         setupSearchBar()
         setupButton()
+        setupTap()
     }
     
     private func setupSearchBar() {
@@ -54,6 +55,16 @@ final class SearchViewController: BaseViewController {
     
     private func setupButton() {
         screenView.searchButton.addTarget(self, action: #selector(searchTap), for: .touchUpInside)
+    }
+    
+    private func setupTap() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    // MARK: - Actions
+    @objc private func closeKeyboard() {
+        view.endEditing(true)
     }
     
     @objc private func searchTap() {

@@ -30,6 +30,8 @@ final class HomeView: BaseView {
     // MARK: - Function View's
     private func makeTableView() -> UITableView {
         let tableView = UITableView()
+        tableView.allowsSelection = true
+        tableView.isUserInteractionEnabled = true
         tableView.registerClass(from: HomeViewCell.self)
         return tableView
     }

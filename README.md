@@ -8,6 +8,7 @@ A arquitetura do projeto está em MVVM, e foi usado Coordinator para fazer a tro
 Também usei Rx para fazer algumas coisas.
 As views estão em ViewCode, mas usei o SnapKit que faz escrever um pouco menos de código.
 
-Ah e claro, não esquecer de rodar o "pod install" :)
+Por favor, rodar o "pod install" para instalar todos os pods
+Também fiz alguns testes unitários 
 
-Muito obrigado!
+Muito obrigado! :) 

@@ -6,31 +6,36 @@
 //
 
 import Foundation
-import RxSwift
-import RxCocoa
+import Combine
 
 final class HomeViewModel: BaseViewModel {
     
-    // MARK: - Variables
-    private let searchText = BehaviorRelay<String>(value: "")
+    // MARK: - Properties
+    private let searchText: String
+    private let productRepository: ProductRepository
+    let products = CurrentValueSubject<[Product], Never>([])
     
     // MARK: - Init
-    init(searchText: String) {
-        self.searchText.accept(searchText)
+    init(productRepository: ProductRepository = ProductRepository(), searchText: String) {
+        self.searchText = searchText
+        self.productRepository = productRepository
     }
     
-    // MARK: - Constants
-    let products = BehaviorRelay<[Product]>(value: [])
-    
     func fetchData() {
-        loading.onNext(true)
-        APIService.getProducts(searchText: searchText.value).subscribe { [weak self] (response) in
-            self?.products.accept(response.results)
-            self?.loading.onNext(false)
-        } onError: { [weak self] (error) in
-            self?.error.onNext(error.requestMessage)
-            self?.loading.onNext(false)
-        }.disposed(by: disposeBag)
+        loading.send(true)
+        productRepository.getProducts(searchText: searchText)
+            .sink { [weak self] (response) in
+                switch response {
+                case .finished:
+                    self?.loading.send(false)
+                case .failure(let error):
+                    self?.error.send(error.requestMessage)
+                    self?.loading.send(false)
+                }
+            } receiveValue: { [weak self] (response) in
+                self?.products.send(response.results)
+            }
+            .store(in: &subscriptions)
     }
     
 }

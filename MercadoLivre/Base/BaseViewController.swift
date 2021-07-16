@@ -6,11 +6,11 @@
 //
 
 import UIKit
-import RxSwift
+import Combine
 
 class BaseViewController: UIViewController {
     
     // MARK: - Variables
-    let disposeBag = DisposeBag()
+    var subscriptions: Set<AnyCancellable> = []
     
 }

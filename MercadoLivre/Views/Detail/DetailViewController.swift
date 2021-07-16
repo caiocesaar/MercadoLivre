@@ -36,7 +36,7 @@ final class DetailViewController: BaseViewController {
     }
     
     private func setupData() {
-        guard let product = viewModel.product.value else { return }
+        guard let product = viewModel.product else { return }
         screenView.setupData(product: product)
     }
     

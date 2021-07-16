@@ -5,15 +5,15 @@
 //  Created by Cesar on 22/03/21.
 //
 
-import RxCocoa
+import Combine
 
 final class DetailViewModel: BaseViewModel {
     
-    let product = BehaviorRelay<Product?>(value: nil)
+    let product: Product!
     
     // MARK: - Init
     init(product: Product) {
-        self.product.accept(product)
+        self.product = product
     }
     
 }

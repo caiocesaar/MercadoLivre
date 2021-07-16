@@ -77,7 +77,7 @@ final class SearchViewController: BaseViewController {
 extension SearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        viewModel.searchText.accept(searchText)
+        viewModel.searchText.send(searchText)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

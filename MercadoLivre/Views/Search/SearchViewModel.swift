@@ -6,11 +6,11 @@
 //
 
 import Foundation
-import RxCocoa
+import Combine
 
 final class SearchViewModel: BaseViewModel {
     
     // MARK: - Variables
-    let searchText = BehaviorRelay<String>(value: "")
+    let searchText = CurrentValueSubject<String, Never>("")
     
 }

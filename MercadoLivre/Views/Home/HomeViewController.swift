@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
 
 protocol HomeViewControllerDelegate: class {
     func openDetail(product: Product)
@@ -60,18 +58,18 @@ final class HomeViewController: BaseViewController {
     private func setupObservables() {
         
         viewModel.loading
-            .asDriver(onErrorJustReturn: false)
-            .drive { [weak self] (loading) in
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] (loading) in
                 loading ? self?.refreshControl.beginRefreshing() : self?.refreshControl.endRefreshing()
             }
-            .disposed(by: disposeBag)
+            .store(in: &subscriptions)
         
         viewModel.products
-            .asObservable()
-            .subscribe { [weak self] (_) in
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] (_) in
                 self?.screenView.tableView.reloadData()
             }
-            .disposed(by: disposeBag)
+            .store(in: &subscriptions)
         
     }
     

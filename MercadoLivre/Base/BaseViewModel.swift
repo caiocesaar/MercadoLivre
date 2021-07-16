@@ -5,15 +5,13 @@
 //  Created by Cesar on 22/03/21.
 //
 
-import RxSwift
+import Combine
 
 class BaseViewModel {
     
-    // MARK: - Rx Disposable
-    let disposeBag = DisposeBag()
-    
-    // MARK: - Variables
-    let loading = PublishSubject<Bool>()
-    let error = PublishSubject<String>()
+    // MARK: - Combine Properties
+    let loading = PassthroughSubject<Bool, Never>()
+    let error = PassthroughSubject<String, Never>()
+    var subscriptions: Set<AnyCancellable> = []
     
 }
